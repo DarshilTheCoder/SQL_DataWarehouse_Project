@@ -1,0 +1,23 @@
+"""
+=================================================================================
+
+This script is used to create the databases. 
+  First it will gonna drop all the databases if exists and then creates entirely new from scratch
+  CAUTION :- As it gonna drop entire database so it will delete all the data init permanently. So run it cauntionaly
+
+=================================================================================  
+"""
+
+
+
+
+DROP DATABASE IF EXISTS Datawarehouse;
+DROP DATABASE IF EXISTS bronze;
+DROP DATABASE IF EXISTS gold;
+DROP DATABASE IF EXISTS silver;
+
+CREATE DATABASE Datawarehouse;
+USE Datawarehouse;
+CREATE SCHEMA bronze;
+CREATE SCHEMA silver;
+CREATE SCHEMA gold;
